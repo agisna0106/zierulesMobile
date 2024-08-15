@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 /// Flutter code sample for [BottomNavigationBar].
 
@@ -153,8 +155,90 @@ class _BottomNavigationBarExampleState
       ),
     ),
     Center(
-      child: Card(),
-    ),
+        child: Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: <Widget>[
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Padding(
+              padding: EdgeInsets.only(left: 20, top: 10),
+              child: Text(
+                'Tata Tertib Sekolah',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Color.fromARGB(255, 48, 53, 146),
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            )
+          ],
+        ),
+        Padding(
+          padding: EdgeInsets.only(top: 20, left: 20),
+          child: Row(
+            children: [
+              Text(
+                'Siswa Wajib Berpakaian Lengkap',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Color.fromARGB(255, 48, 53, 146),
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(top: 20, left: 20, right: 20),
+          child: Card(
+            child: Row(
+              children: <Widget>[
+                Column(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(top: 10, left: 10),
+                      child: Text(
+                        'Poin Pelanggaran',
+                        style: TextStyle(
+                            fontSize: 12,
+                            color: Color.fromARGB(255, 48, 53, 146),
+                            fontWeight: FontWeight.normal),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(
+                        bottom: 10,
+                        top: 10,
+                      ),
+                      child: CircleAvatar(
+                        radius: 20,
+                        backgroundColor: Color.fromARGB(255, 48, 53, 146),
+                        child: Text(
+                          '+10',
+                          style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.white,
+                              fontWeight: FontWeight.normal),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Text(
+                  'Siswa Tidak Memakai',
+                  style: TextStyle(
+                    overflow: TextOverflow.ellipsis,
+                    fontSize: 16,
+                    color: Color.fromARGB(255, 48, 53, 146),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    )),
     Text(
       'Index 0: Profile',
       style: optionStyle,
