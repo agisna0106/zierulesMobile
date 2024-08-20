@@ -154,91 +154,193 @@ class _BottomNavigationBarExampleState
         margin: EdgeInsets.only(bottom: 50, top: 10, right: 20, left: 20),
       ),
     ),
-    Center(
-        child: Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: <Widget>[
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Padding(
-              padding: EdgeInsets.only(left: 20, top: 10),
-              child: Text(
-                'Tata Tertib Sekolah',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Color.fromARGB(255, 48, 53, 146),
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            )
-          ],
-        ),
-        Padding(
-          padding: EdgeInsets.only(top: 20, left: 20),
-          child: Row(
+    Padding(
+      padding: EdgeInsets.only(left: 20, right: 10),
+      child: Column(
+        children: [
+          Row(
             children: [
-              Text(
-                'Siswa Wajib Berpakaian Lengkap',
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Color.fromARGB(255, 48, 53, 146),
-                  fontWeight: FontWeight.bold,
+              Padding(
+                padding: EdgeInsets.only(left: 0),
+                child: Text(
+                  'Tata Tertib Sekolah',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Color.fromARGB(255, 48, 53, 146),
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ],
           ),
-        ),
-        Padding(
-          padding: EdgeInsets.only(top: 20, left: 20, right: 20),
-          child: Card(
-            child: Row(
-              children: <Widget>[
-                Column(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(top: 10, left: 10),
-                      child: Text(
-                        'Poin Pelanggaran',
-                        style: TextStyle(
-                            fontSize: 12,
-                            color: Color.fromARGB(255, 48, 53, 146),
-                            fontWeight: FontWeight.normal),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(
-                        bottom: 10,
-                        top: 10,
-                      ),
-                      child: CircleAvatar(
-                        radius: 20,
-                        backgroundColor: Color.fromARGB(255, 48, 53, 146),
+          Row(
+            children: [
+              Padding(
+                padding: EdgeInsets.only(top: 40),
+                child: Text(
+                  'Siswa Wajib Berpakaian Lengkap',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Color.fromARGB(255, 48, 53, 146),
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: 40),
+            child: Card(
+              elevation: 5,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(
+                          top: 5,
+                          left: 10,
+                        ),
                         child: Text(
-                          '+10',
+                          'Poin Pelanggaran',
                           style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.white,
+                              fontSize: 12,
+                              color: Color.fromARGB(255, 48, 53, 146),
                               fontWeight: FontWeight.normal),
                         ),
                       ),
-                    ),
-                  ],
-                ),
-                Text(
-                  'Siswa Tidak Memakai',
-                  style: TextStyle(
-                    overflow: TextOverflow.ellipsis,
-                    fontSize: 16,
-                    color: Color.fromARGB(255, 48, 53, 146),
+                      Padding(
+                        padding: EdgeInsets.only(
+                          bottom: 20,
+                          top: 10,
+                        ),
+                        child: CircleAvatar(
+                          radius: 20,
+                          backgroundColor: Color.fromARGB(255, 48, 53, 146),
+                          child: Text(
+                            '+10',
+                            style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.white,
+                                fontWeight: FontWeight.normal),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-              ],
+                  Padding(
+                    padding: EdgeInsets.only(right: 20),
+                    child: Text(
+                      'Tata Tertibnya',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Color.fromARGB(255, 48, 53, 146),
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
-        ),
-      ],
-    )),
+        ],
+      ),
+    ),
+    Padding(
+      padding: EdgeInsets.only(left: 20, right: 20),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Padding(
+                padding: EdgeInsets.only(left: 0),
+                child: Text(
+                  'Riwayat Pelanggaran',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Color.fromARGB(255, 48, 53, 146),
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              Padding(
+                padding: EdgeInsets.only(top: 40),
+                child: Text(
+                  'Hari ini',
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: Color.fromARGB(255, 48, 53, 146),
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: 20),
+            child: Card(
+              elevation: 5,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(20),
+                    child: CircleAvatar(
+                      radius: 30,
+                      backgroundColor: Colors.red,
+                      child: Text(
+                        '+2',
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.white,
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(right: 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Text(
+                          'tanggal',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Color.fromARGB(255, 48, 53, 146),
+                          ),
+                        ),
+                        Text(
+                          'Pelanggaran',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Color.fromARGB(255, 48, 53, 146),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          'Guru',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Color.fromARGB(255, 48, 53, 146),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    ),
+    Column(),
     Text(
       'Index 0: Profile',
       style: optionStyle,
