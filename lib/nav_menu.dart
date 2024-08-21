@@ -33,6 +33,7 @@ class _BottomNavigationBarExampleState
   static const List<Widget> _widgetOptions = <Widget>[
     Center(
       child: Card(
+        color: Colors.white,
         semanticContainer: true,
         clipBehavior: Clip.antiAliasWithSaveLayer,
         shape: RoundedRectangleBorder(
@@ -176,7 +177,7 @@ class _BottomNavigationBarExampleState
           Row(
             children: [
               Padding(
-                padding: EdgeInsets.only(top: 40),
+                padding: EdgeInsets.only(top: 40, left: 5),
                 child: Text(
                   'Siswa Wajib Berpakaian Lengkap',
                   style: TextStyle(
@@ -189,59 +190,120 @@ class _BottomNavigationBarExampleState
             ],
           ),
           Padding(
-            padding: EdgeInsets.only(top: 40),
-            child: Card(
-              elevation: 5,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
+            padding: EdgeInsets.only(top: 20),
+            child: Column(
+              children: [
+                Card(
+                  elevation: 2,
+                  color: Colors.white,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Padding(
-                        padding: EdgeInsets.only(
-                          top: 5,
-                          left: 10,
-                        ),
-                        child: Text(
-                          'Poin Pelanggaran',
-                          style: TextStyle(
-                              fontSize: 12,
-                              color: Color.fromARGB(255, 48, 53, 146),
-                              fontWeight: FontWeight.normal),
-                        ),
+                      Column(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(
+                              top: 10,
+                              left: 20,
+                            ),
+                            child: Text(
+                              'Poin Pelanggaran',
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  color: Color.fromARGB(255, 48, 53, 146),
+                                  fontWeight: FontWeight.normal),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(
+                              bottom: 20,
+                              top: 10,
+                            ),
+                            child: CircleAvatar(
+                              radius: 20,
+                              backgroundColor:
+                                  Color.fromARGB(255, 251, 143, 49),
+                              child: Text(
+                                '+10',
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.normal),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                       Padding(
-                        padding: EdgeInsets.only(
-                          bottom: 20,
-                          top: 10,
-                        ),
-                        child: CircleAvatar(
-                          radius: 20,
-                          backgroundColor: Color.fromARGB(255, 48, 53, 146),
-                          child: Text(
-                            '+10',
-                            style: TextStyle(
-                                fontSize: 16,
-                                color: Colors.white,
-                                fontWeight: FontWeight.normal),
+                        padding: EdgeInsets.only(right: 20),
+                        child: Text(
+                          'Tata Tertibnya',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Color.fromARGB(255, 48, 53, 146),
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
                     ],
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(right: 20),
-                    child: Text(
-                      'Tata Tertibnya',
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Color.fromARGB(255, 48, 53, 146),
-                        fontWeight: FontWeight.bold,
+                ),
+                Card(
+                  elevation: 2,
+                  color: Colors.white,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(
+                              top: 10,
+                              left: 20,
+                            ),
+                            child: Text(
+                              'Poin Pelanggaran',
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  color: Color.fromARGB(255, 48, 53, 146),
+                                  fontWeight: FontWeight.normal),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(
+                              bottom: 20,
+                              top: 10,
+                            ),
+                            child: CircleAvatar(
+                              radius: 20,
+                              backgroundColor:
+                                  Color.fromARGB(255, 251, 143, 49),
+                              child: Text(
+                                '+10',
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.normal),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                    ),
+                      Padding(
+                        padding: EdgeInsets.only(right: 20),
+                        child: Text(
+                          'Tata Tertibnya',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Color.fromARGB(255, 48, 53, 146),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ],
@@ -269,22 +331,23 @@ class _BottomNavigationBarExampleState
           Row(
             children: [
               Padding(
-                padding: EdgeInsets.only(top: 40),
+                padding: EdgeInsets.only(top: 40, left: 5),
                 child: Text(
                   'Hari ini',
                   style: TextStyle(
-                    fontSize: 12,
+                    fontSize: 16,
                     color: Color.fromARGB(255, 48, 53, 146),
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
             ],
           ),
           Padding(
-            padding: EdgeInsets.only(top: 20),
+            padding: EdgeInsets.only(top: 10),
             child: Card(
-              elevation: 5,
+              elevation: 2,
+              color: Colors.white,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
