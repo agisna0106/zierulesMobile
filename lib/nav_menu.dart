@@ -31,129 +31,156 @@ class _BottomNavigationBarExampleState
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    Center(
-      child: Card(
-        color: Colors.white,
-        semanticContainer: true,
-        clipBehavior: Clip.antiAliasWithSaveLayer,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(30)),
+    Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Padding(
+              padding: EdgeInsets.only(left: 25),
+              child: Text(
+                'Profile',
+                style: TextStyle(
+                  color: Color.fromARGB(255, 48, 53, 146),
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ],
         ),
-        child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 30, horizontal: 70),
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: <Widget>[
-              CircleAvatar(
-                radius: 50,
-                backgroundImage: NetworkImage('https://picsum.photos/200/300'),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 15),
-                child: Text(
-                  'Agisna Rizkan Rizkullah',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Color.fromARGB(255, 48, 53, 146),
-                    fontWeight: FontWeight.bold,
+        Center(
+          child: Card(
+            color: Colors.white,
+            semanticContainer: true,
+            clipBehavior: Clip.antiAliasWithSaveLayer,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(30)),
+            ),
+            child: Padding(
+              padding: EdgeInsets.symmetric(vertical: 30, horizontal: 70),
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                children: <Widget>[
+                  CircleAvatar(
+                    radius: 50,
+                    backgroundImage:
+                        NetworkImage('https://picsum.photos/200/300'),
                   ),
-                ),
-              ),
-              Text(
-                '202110001',
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Color.fromARGB(255, 48, 53, 146),
-                ),
-              ),
-              Text(
-                'XII RPL 1',
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Color.fromARGB(255, 48, 53, 146),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(top: 20),
-                child: Center(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Column(
-                        children: <Widget>[
-                          Text(
-                            '    Poin    ',
-                            style: TextStyle(
-                              color: Color.fromARGB(255, 48, 53, 146),
-                            ),
-                          ),
-                          Text(
-                            '30',
-                            style: TextStyle(
-                              fontSize: 30,
-                              fontWeight: FontWeight.bold,
-                              color: Color.fromARGB(255, 48, 53, 146),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Text(
-                        ' | ',
-                        style: TextStyle(
-                          fontSize: 60,
-                          fontWeight: FontWeight.w200,
-                          color: Color.fromARGB(255, 48, 53, 146),
-                        ),
-                      ),
-                      Column(
-                        children: <Widget>[
-                          Text(
-                            'Pelanggaran',
-                            style: TextStyle(
-                              color: Color.fromARGB(255, 48, 53, 146),
-                            ),
-                          ),
-                          Text(
-                            '5',
-                            style: TextStyle(
-                              fontSize: 30,
-                              fontWeight: FontWeight.bold,
-                              color: Color.fromARGB(255, 48, 53, 146),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Image(
-                image: AssetImage('assets/images/logo.png'),
-              ),
-              Card(
-                color: Color.fromARGB(255, 251, 143, 49),
-                elevation: 2,
-                child: Padding(
-                  padding: EdgeInsets.all(8),
-                  child: Center(
+                  Padding(
+                    padding: const EdgeInsets.only(top: 15),
                     child: Text(
-                      'Logout',
+                      'Agisna Rizkan Rizkullah',
                       style: TextStyle(
-                        color: Colors.white,
+                        fontSize: 20,
+                        color: Color.fromARGB(255, 48, 53, 146),
                         fontWeight: FontWeight.bold,
-                        fontSize: 16,
                       ),
                     ),
                   ),
-                ),
-                margin: EdgeInsets.only(top: 40),
+                  Text(
+                    '202110001',
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Color.fromARGB(255, 48, 53, 146),
+                    ),
+                  ),
+                  Text(
+                    'XII RPL 1',
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Color.fromARGB(255, 48, 53, 146),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 20),
+                    child: Center(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Column(
+                            children: <Widget>[
+                              Text(
+                                '    Poin    ',
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 48, 53, 146),
+                                ),
+                              ),
+                              Text(
+                                '30',
+                                style: TextStyle(
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color.fromARGB(255, 48, 53, 146),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Text(
+                            ' | ',
+                            style: TextStyle(
+                              fontSize: 60,
+                              fontWeight: FontWeight.w200,
+                              color: Color.fromARGB(255, 48, 53, 146),
+                            ),
+                          ),
+                          Column(
+                            children: <Widget>[
+                              Text(
+                                'Pelanggaran',
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 48, 53, 146),
+                                ),
+                              ),
+                              Text(
+                                '5',
+                                style: TextStyle(
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color.fromARGB(255, 48, 53, 146),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Image(
+                    image: AssetImage('assets/images/logo.png'),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(8),
+                    child: Row(
+                      children: <Widget>[],
+                    ),
+                  ),
+                  Card(
+                    color: Color.fromARGB(255, 251, 143, 49),
+                    elevation: 2,
+                    child: Padding(
+                      padding: EdgeInsets.all(8),
+                      child: Center(
+                        child: Text(
+                          'Logout',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ),
+                    ),
+                    margin: EdgeInsets.only(top: 10),
+                  ),
+                ],
               ),
-            ],
+            ),
+            elevation: 10,
+            margin: EdgeInsets.only(bottom: 50, top: 10, right: 20, left: 20),
           ),
         ),
-        elevation: 10,
-        margin: EdgeInsets.only(bottom: 50, top: 10, right: 20, left: 20),
-      ),
+      ],
     ),
     Padding(
       padding: EdgeInsets.only(left: 20, right: 10),
